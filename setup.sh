@@ -31,3 +31,17 @@ echo "Europe/London" | sudo tee /etc/timezone
 Europe/London
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
+# Customisation
+sudo apt-get install gnome-tweak-tool -y
+
+sudo apt-get install gstreamer1.0-libav
+
+
+wget https://github.com/iabem97/komorebi/releases/download/v2.0/komorebi-2-64-bit.deb
+sudo apt-get install gdebi -y
+sudo gdebi komorebi-2-64-bit.deb -y
+git clone https://github.com/iabem97/komorebi.git
+cd komorebi
+mkdir build && cd build 
+cmake .. && sudo make install 
+
