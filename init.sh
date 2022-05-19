@@ -10,7 +10,7 @@ directory="Documents"
 
 # Set the path to the directory where the script is located
 
-cd "$directory"
+cd "~/$directory"
 sudo mkdir Build 
 cd Build
 
