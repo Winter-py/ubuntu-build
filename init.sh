@@ -4,7 +4,7 @@
 sudo apt-get install git -y
 
 #GitHub stuff
-repository= "https://github.com/Winter-py/ubuntu-build.git"
+repository= https://github.com/Winter-py/ubuntu-build.git
 
 directory="Documents"
 
