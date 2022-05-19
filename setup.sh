@@ -26,3 +26,8 @@ sudo apt update
 
 sudo apt install brave-browser -y
 
+# Time Zone
+echo "Europe/London" | sudo tee /etc/timezone
+Europe/London
+sudo dpkg-reconfigure --frontend noninteractive tzdata
+
