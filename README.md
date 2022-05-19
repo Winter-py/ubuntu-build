@@ -8,3 +8,13 @@ Shell script for fresh ubuntu install
 chmod +x init.sh
 
 sudo ./init.sh
+
+Application that will be installed
+
+Python
+
+VS Code
+
+Some Network Tools 
+
+Brave Browser
