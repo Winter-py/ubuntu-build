@@ -3,10 +3,33 @@ sudo apt-get upgrade -y
 
 #Development Stuff
 sudo apt-get install python -y
+sudo apt install python3-pip -y
+pip install boto3
+
 sudo apt install software-properties-common apt-transport-https wget -y
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add - 
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" 
 sudo apt install code -y
+sudo apt install python3-pip -y
+sudo apt install packer -y
+
+#Terraform install
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common 
+
+wget -O- https://apt.releases.hashicorp.com/gpg | \
+    gpg --dearmor | \
+    sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg
+
+gpg --no-default-keyring \
+    --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+    --fingerprint
+
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+    https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+    sudo tee /etc/apt/sources.list.d/hashicorp.list
+
+sudo apt update
+sudo apt-get install terraform -y
 
 
 #Network Tools 
